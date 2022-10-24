@@ -126,6 +126,7 @@ public class Goleiro {
 		if (trave.checarGol(chute, celulasDefesa, AAG, forca) == true) {
 			this.quantDefesa += 1;
 			this.trave.celulas[y][x].setChutesDefendidos(+1);
+			this.trave.celulas[y][x].setChute(+1);
 		} else {
 			this.quantGol += 1;
 			this.trave.celulas[y][x].setGol(+1);

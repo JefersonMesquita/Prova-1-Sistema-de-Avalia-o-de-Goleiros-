@@ -12,6 +12,7 @@ public class Start {
 		apresentacao.chutesFora();
 		apresentacao.golsNoAngulo();
 		apresentacao.indicarSelecao();
+		apresentacao.golsNaoDefendidos();
 		apresentacao.imprimirDadosGoleiro();
 		apresentacao.quadranteComMaisGols();
 		apresentacao.matrizGolsDefendidosLevados();

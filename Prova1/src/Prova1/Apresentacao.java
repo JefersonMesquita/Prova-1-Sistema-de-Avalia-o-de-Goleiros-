@@ -48,7 +48,7 @@ public class Apresentacao {
 		}
 	}
 
-	//Questão 1
+	// Questão 1
 	public void mediaChutesDefendidos() {
 		System.out.println("\n\nQuestão 1:");
 		float soma1 = 0, soma2 = 0, soma3 = 0, soma4 = 0, soma5 = 0;
@@ -81,7 +81,7 @@ public class Apresentacao {
 		System.out.println("media de defesa selecao 5: " + media5);
 	}
 
-	//Questão 2
+	// Questão 2
 	public void goleiroTitular() {
 		System.out.println("\n\nQuestão 2:");
 		for (int i = 1; i <= 5; i++) {
@@ -99,7 +99,7 @@ public class Apresentacao {
 		}
 	}
 
-	//Questão 3
+	// Questão 3
 	public void MediaGolsTomados() {
 		System.out.println("\n\nQuestão 3:");
 		for (Goleiro a : goleiros) {
@@ -109,7 +109,7 @@ public class Apresentacao {
 		}
 	}
 
-	//Questão 4
+	// Questão 4
 	public void chutesFora() {
 		System.out.println("\n\nQuestão 4:");
 		int somaTraveSuperior = 0, somaTraveEsquerda = 0, somaTraveDireita = 0, somaChutesFora = 0;
@@ -136,22 +136,23 @@ public class Apresentacao {
 		System.out.println("Quantidade de chutes fora: " + somaTraveSuperior);
 	}
 
-	//Questão 5
+	// Questão 5
 	public void golsNoAngulo() {
 		System.out.println("\n\nQuestão 5:");
 		int cont = 0;
 		for (Goleiro a : goleiros) {
 			for (int i = 0; i < 8; i++) {
 				for (int j = 0; j < 16; j++) {
-					if (a.getTrave().celulas[i][j].isNoAngulo() == true && a.getTrave().celulas[i][j].getChute() > 0);
-					cont += a.getTrave().celulas[i][j].getChute();
+					if (a.getTrave().celulas[i][j].isNoAngulo() == true && a.getTrave().celulas[i][j].getGol()>0) {
+						cont += a.getTrave().celulas[i][j].getChute();
+					}
 				}
 			}
 		}
 		System.out.println("Quantidade de chutes no angulo: " + cont);
 	}
 
-	//Questão 6
+	// Questão 6
 	public void indicarSelecao() {
 		System.out.println("\n\nQuestão 6:");
 		int selecaoRecomendada = 0;
@@ -171,7 +172,23 @@ public class Apresentacao {
 		System.out.println("Seleção recomendada: " + selecaoRecomendada);
 	}
 
-	//Questão 8
+	// Questao 7
+	public void golsNaoDefendidos() {
+		System.out.println("\n\nQuestão 7:");
+		int cont = 0;
+		for (Goleiro a : goleiros) {
+			for (int i = 0; i < 8; i++) {
+				for (int j = 0; j < 16; j++) {
+					if ((a.getTrave().celulas[i][j].getChute() > 0) && (a.getTrave().celulas[i][j].getGol() == 0)) {
+						cont += 1;
+					}
+				}
+			}
+		}
+		System.out.println("Quantidade de gols não defendidos: " + cont);
+	}
+
+	// Questão 8
 	public void imprimirDadosGoleiro() {
 		System.out.println("\n\nQuestão 8:");
 		for (Goleiro a : goleiros) {
@@ -180,7 +197,7 @@ public class Apresentacao {
 		}
 	}
 
-	//Questão 9
+	// Questão 9
 	public void quadranteComMaisGols() {
 		System.out.println("\n\nQuestão 9:");
 		Scanner scan = new Scanner(System.in);
@@ -213,8 +230,8 @@ public class Apresentacao {
 		}
 		System.out.println("Quadrante com mais gols: " + quadranteComMaisGols);
 	}
-	
-	//Questão 10
+
+	// Questão 10
 	public void matrizGolsDefendidosLevados() {
 		System.out.println("\n\nQuestão 10:");
 		for (Goleiro a : goleiros) {
