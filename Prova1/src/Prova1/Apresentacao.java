@@ -48,7 +48,8 @@ public class Apresentacao {
 		}
 	}
 
-	public void questao1() {
+	//Questão 1
+	public void mediaChutesDefendidos() {
 		System.out.println("\n\nQuestão 1:");
 		float soma1 = 0, soma2 = 0, soma3 = 0, soma4 = 0, soma5 = 0;
 		for (Goleiro a : goleiros) {
@@ -80,7 +81,8 @@ public class Apresentacao {
 		System.out.println("media de defesa selecao 5: " + media5);
 	}
 
-	public void questao2() {
+	//Questão 2
+	public void goleiroTitular() {
 		System.out.println("\n\nQuestão 2:");
 		for (int i = 1; i <= 5; i++) {
 			int maior = 0;
@@ -97,7 +99,8 @@ public class Apresentacao {
 		}
 	}
 
-	public void questao3() {
+	//Questão 3
+	public void MediaGolsTomados() {
 		System.out.println("\n\nQuestão 3:");
 		for (Goleiro a : goleiros) {
 			float media = ((float) a.getQuantGol() / 30);
@@ -106,7 +109,8 @@ public class Apresentacao {
 		}
 	}
 
-	public void questao4() {
+	//Questão 4
+	public void chutesFora() {
 		System.out.println("\n\nQuestão 4:");
 		int somaTraveSuperior = 0, somaTraveEsquerda = 0, somaTraveDireita = 0, somaChutesFora = 0;
 		for (Goleiro a : goleiros) {
@@ -132,7 +136,8 @@ public class Apresentacao {
 		System.out.println("Quantidade de chutes fora: " + somaTraveSuperior);
 	}
 
-	public void questao5() {
+	//Questão 5
+	public void golsNoAngulo() {
 		System.out.println("\n\nQuestão 5:");
 		int cont = 0;
 		for (Goleiro a : goleiros) {
@@ -146,7 +151,8 @@ public class Apresentacao {
 		System.out.println("Quantidade de chutes no angulo: " + cont);
 	}
 
-	public void questao6() {
+	//Questão 6
+	public void indicarSelecao() {
 		System.out.println("\n\nQuestão 6:");
 		int selecaoRecomendada = 0;
 		int maior = 0;
@@ -165,7 +171,8 @@ public class Apresentacao {
 		System.out.println("Seleção recomendada: " + selecaoRecomendada);
 	}
 
-	public void questao8() {
+	//Questão 8
+	public void imprimirDadosGoleiro() {
 		System.out.println("\n\nQuestão 8:");
 		for (Goleiro a : goleiros) {
 			System.out.println(a.getNome() + ", seleção: " + a.getSelecao() + ", gols defendidos: " + a.getQuantDefesa()
@@ -173,7 +180,8 @@ public class Apresentacao {
 		}
 	}
 
-	public void questao9() {
+	//Questão 9
+	public void quadranteComMaisGols() {
 		System.out.println("\n\nQuestão 9:");
 		Scanner scan = new Scanner(System.in);
 
@@ -205,8 +213,9 @@ public class Apresentacao {
 		}
 		System.out.println("Quadrante com mais gols: " + quadranteComMaisGols);
 	}
-
-	public void questao10() {
+	
+	//Questão 10
+	public void matrizGolsDefendidosLevados() {
 		System.out.println("\n\nQuestão 10:");
 		for (Goleiro a : goleiros) {
 			System.out.println(a.getNome());

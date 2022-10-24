@@ -6,14 +6,14 @@ public class Start {
 		Apresentacao apresentacao = new Apresentacao();
 		apresentacao.iniciar();
 		
-		apresentacao.questao1();
-		apresentacao.questao2();
-		apresentacao.questao3();
-		apresentacao.questao4();
-		apresentacao.questao5();
-		apresentacao.questao6();
-		apresentacao.questao8();
-		apresentacao.questao9();
-		apresentacao.questao10();
+		apresentacao.mediaChutesDefendidos();
+		apresentacao.goleiroTitular();
+		apresentacao.MediaGolsTomados();
+		apresentacao.chutesFora();
+		apresentacao.golsNoAngulo();
+		apresentacao.indicarSelecao();
+		apresentacao.imprimirDadosGoleiro();
+		apresentacao.quadranteComMaisGols();
+		apresentacao.matrizGolsDefendidosLevados();
 	}
 }
